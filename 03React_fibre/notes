@@ -1,0 +1,33 @@
+# "create room" create tree like structure IN React as DOM in JS
+# but DOM refresh all page on single changes tooo....
+# but react save us by comparing both tree structure before and after changes and only make changes in particular element not reload whole page called "VIRTUAL- DOM".
+# BUT, the problem is react immediately changes the update ....this will effect our animation effects or those code which take a bit time to load full result
+
+
+
+
+<!-- **********************# We can visit to "REACT FIBRE" concept to tackle this problem****************** -->
+# The goal of "React Fiber" is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+# Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives. 
+
+
+
+
+<!-- *************************# What is reconciliation?******************************** -->
+# The algorithm React uses to differentiate one tree with another to determine which parts need to be changed.
+
+# Actually re-rendering the entire app on each change only works for the most trivial apps; in a real-world app, it's prohibitively costly in terms of performance. React has optimizations which create the appearance of whole app re-rendering while maintaining great performance. The bulk of these optimizations are part of a process called reconciliation.
+
+# Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM." A high-level description goes something like this: when you render a React application, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment — for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
+
+
+
+<!-- ***********************************# What is a fiber?********************************************** -->
+# We're about to discuss the heart of React Fiber's architecture. Fibers are a much lower-level abstraction than application developers typically think about. If you find yourself frustrated in your attempts to understand it, don't feel discouraged. Keep trying and it will eventually make sense.
+
+# We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. Specifically, we need to be able to:-
+# a. pause work and come back to it later.
+# b. assign priority to different types of work.
+# c. reuse previously completed work.
+# d. abort work if it's no longer needed.
