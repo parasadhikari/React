@@ -1,0 +1,24 @@
+# React-Rewise.
+# Roadmap.
+→React make beasy to manage and build complex frontend
+→After mastering js we can learn React
+
+# Why React introduce.
+→ "Phantom message problem" → in facebook
+→In facebook notification icon is generated at the top where no. of message pop-up.... after opening the chat too... that notification no. doesn't decrease له
+
+this is due to Js(state) → Syncing Problem with →DOM(UI)
+
+Framework     v/s      Library 
+    ↓                    ↓
+Race millitary        Cool dude
+naming Convenction    no convenction
+eg- Node JS, Jango    eg:- React
+
+
+# Topic to Learn in React
+
+→ core of React (state or UI manuplation, JSX).
+→Component Resuability
+→ Reusing of component (props)
+→How to Propagate Change (HOOKS)

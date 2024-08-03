@@ -1,0 +1,21 @@
+# Setup Installation.
+→Vs Code
+→Nodejs →node-v
+→React-dev (for documentation)
+→ create folder in desktop (Any)
+→Github new repo
+
+# How to start project.
+→Read documentation "React.dev"
+→we can create projet using "React-bundler" → "Vite" or "Parcel" 
+→SO,we'll now make project using "Vite"
+→vite website (viteJs.dev)
+→NPm create vite @latest →→Copy
+→Project/Package name 
+→framework→→→React
+→Variant→→→JS  (Now done File created)
+→cd "filename"
+→ls (Package.json(✓) but nodemodule(X))
+→So,npm i
+→npm run dev (Project Start)
+→Delete unwanted File or Code etc.
